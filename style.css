@@ -40,7 +40,8 @@
 	margin-block-end: 1em;
 }
 
-.task {
+.todo__input,
+.todo__label {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -50,22 +51,26 @@
   display: flex;
 }
 
-ul {
+.todo__list {
   margin: 0;
   padding: 0px;
 }
 
-li,
+.todo__item,
 .todo__title {
   list-style: none;
 }
 
-input,
-button {
+.todo__input,
+.todo__button-edit,
+.todo__button-delete,
+.todo__button-add {
   outline: none;
 }
 
-button {
+.todo__button-edit,
+.todo__button-delete,
+.todo__button-add {
   background: none;
   border: 0px;
   color: #888;
@@ -75,7 +80,9 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.todo__button-edit:hover,
+.todo__button-delete:hover,
+.todo__button-add:hover {
   color: #3a3a3a;
 }
 
@@ -91,7 +98,7 @@ button:hover {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.todo__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -104,7 +111,7 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.todo__input:focus {
   color: #333;
 }
 
@@ -115,13 +122,14 @@ input[type="text"]:focus {
   margin: 0 0 20px;
 }
 
-input#new-task {
+.todo__input.todo__input_new {
+	display: block;
   width: 318px;
 }
 
 /* Task list */
 
-li {
+.todo__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -130,53 +138,53 @@ li {
   align-items: center;
 }
 
-li > * {
+.todo__item {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.todo__checkbox {
   margin: 0 10px;
 }
 
-li > label {
+.todo__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li > input[type="text"] {
+.todo__input {
   width: 226px;
 }
 
-button.delete img {
+.todo__remove-icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.todo__remove-icon:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-ul#completed-tasks label {
+#completed-tasks .todo__label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-ul li input[type="text"] {
+.todo__input {
   display: none;
 }
 
-ul li.editMode input[type="text"] {
+.edit-mode .todo__input {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.edit-mode .todo__label {
   display: none;
 }
