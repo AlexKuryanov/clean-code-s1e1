@@ -17,9 +17,11 @@ body {
   font-family: fantasy, cursive;
 }
 @media (max-width:768px) {
-  .aaa { 
+
+  .aaa {
     text-align: center;
   }
+
 }
 .centered-main-page-element {
   display: block;
@@ -56,6 +58,7 @@ button {
 button:hover {
   color: #3a3a3a;
 }
+
 /* Heading */
 h3,
 label[for="new-task"] {
@@ -115,7 +118,7 @@ li > label {
   font-size: 18px;
   width: 226px;
 }
-li >    input[type="text"] {
+li > input[type="text"] {
   width: 226px
 }
 button.delete img {
