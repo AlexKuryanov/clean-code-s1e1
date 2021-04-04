@@ -4,24 +4,24 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.aaa {
+.about {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.aaa img {
+.about img {
   width: 100%;
 }
-.aaa .more_inf {
+.about .about__link {
   font-family: fantasy, cursive;
 }
 @media (max-width:768px) {
-  .aaa {
+  .about {
     text-align: center;
   }
 }
-.centered-main-page-element {
+.todo {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -31,7 +31,7 @@ body {
   display: inline-block;
   flex-grow: 1
 }
-.task-row-wrapper {
+.row-wrapper {
   display: flex;
 }
 ul {
